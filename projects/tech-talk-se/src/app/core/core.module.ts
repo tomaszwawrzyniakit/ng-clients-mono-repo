@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ScheduleDialogComponent } from '../event/components/schedule-dialog/schedule-dialog.component';
+import { ScheduleDialogResolver } from '../event/components/schedule-dialog/schedule-dialog.resolver';
 
 @NgModule({
   declarations: [ShellComponent],
@@ -15,7 +16,10 @@ import { ScheduleDialogComponent } from '../event/components/schedule-dialog/sch
     RouterModule.forRoot([
       {
         path: '',
-        component: ScheduleDialogComponent
+        component: ScheduleDialogComponent,
+        resolve: {
+          schedule: ScheduleDialogResolver
+        }
       },
       {path: '', redirectTo: '/', pathMatch: 'full'}
     ]),

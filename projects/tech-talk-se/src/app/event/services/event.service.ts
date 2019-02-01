@@ -15,8 +15,7 @@ export class EventService {
   }
 
   private getEvent(): Observable<EventTo> {
-    // const url = environment.production ? 'api/event' : 'assets/event.json';
-    const url = 'assets/event.json';
+    const url = environment.production ? 'api/event' : 'assets/event.json';
 
     if (!this.cachedEventData$) {
       this.cachedEventData$ = this.http.get<EventTo>(url).pipe(
