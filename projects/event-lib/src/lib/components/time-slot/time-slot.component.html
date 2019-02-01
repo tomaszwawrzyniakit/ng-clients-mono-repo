@@ -1,0 +1,15 @@
+<h2 class="title mat-title">{{timeSlot.name}}</h2>
+<div>
+  <p class="description mat-body-1" *ngIf="timeSlot.description">{{timeSlot.description}}</p>
+  <p class="presenter mat-body-1" *ngIf="timeSlot.presenters">{{timeSlot.presenters}}</p>
+  <p class="details">
+    <span class="event-detail hours" *ngIf="timeSlot.startTime && timeSlot.endTime">
+      <mat-icon>alarm</mat-icon>
+      <span class="icon-label">{{timeSlot.startTime}} - {{timeSlot.endTime}}</span>
+    </span>
+    <span class="event-detail room" *ngIf="timeSlot.room">
+      <mat-icon>home</mat-icon>
+      <span class="icon-label">{{timeSlot.room}}</span>
+    </span>
+  </p>
+</div>

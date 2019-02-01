@@ -1,0 +1,25 @@
+<p class="day-date mat-title">{{formattedDate}}</p>
+
+<div class="main-grid" #dayGrid>
+  <div class="ea-schedule-grid streams" *ngIf="streams.length > 0">
+    <div class="sub-grid" [style.grid-template-columns]="gridTemplateColumnsCssProp">
+      <div class="cell stream" *ngFor="let stream of streams"
+           [style.background]="stream.color"
+           [style.color]="getTextColorContrastedTo(stream.color)">
+        {{stream.name}}
+      </div>
+    </div>
+  </div>
+  <div class="ea-schedule-grid time-slots" *ngFor="let startTime of startTimes" [id]="getIdForTimeRow(startTime)">
+    <div class="cell time">{{startTime}}</div>
+    <div class="sub-grid" [style.grid-template-columns]="gridTemplateColumnsCssProp">
+      <div class="cell time-slot" *ngFor="let timeSlotGridItem of timeSlotGridItemsByStartTimes[startTime]"
+           [style.grid-column-end]="'span ' + timeSlotGridItem.colSpan"
+           [style.background]="timeSlotGridItem.bgColor"
+           [style.color]="timeSlotGridItem.textColor"
+           [class.break-slot]="timeSlotGridItem.timeSlot.isBreak">
+        <elib-time-slot [timeSlot]="timeSlotGridItem.timeSlot"></elib-time-slot>
+      </div>
+    </div>
+  </div>
+</div>

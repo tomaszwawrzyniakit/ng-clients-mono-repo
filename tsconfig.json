@@ -17,6 +17,16 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "event-lib": [
+        "projects/event-lib/src/public_api",
+        "dist/event-lib"
+      ],
+      "event-lib/*": [
+        "projects/event-lib/src/public_api/*",
+        "dist/event-lib/*"
+      ]
+    }
   }
 }

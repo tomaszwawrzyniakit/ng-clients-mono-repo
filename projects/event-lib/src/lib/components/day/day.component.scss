@@ -1,0 +1,62 @@
+@import '../../styles/variables';
+
+.day-date {
+  text-align: center;
+}
+
+.main-grid {
+  display: grid;
+  grid-gap: 2px 2px;
+
+  .ea-schedule-grid {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-gap: inherit;
+
+    &.streams {
+      .sub-grid {
+        grid-column-start: 2;
+      }
+    }
+
+    .sub-grid {
+      display: grid;
+      grid-gap: inherit;
+    }
+
+    .cell {
+      padding: 0.8em 1.2em;
+      vertical-align: top;
+      box-sizing: border-box;
+    }
+
+    .time {
+      background: $elib-grey;
+    }
+
+    .break-slot {
+      background: $elib-grey!important;
+    }
+
+    .time-slot {
+      background: $elib-vibrant-blue;
+    }
+  }
+
+}
+
+@media (max-width: 599px) {
+  .streams {
+    display: none!important;
+  }
+
+  .ea-schedule-grid {
+    .sub-grid {
+      grid-template-columns: 1fr!important;
+    }
+
+    .time-slot {
+      grid-column-end: span 1!important;
+    }
+  }
+}

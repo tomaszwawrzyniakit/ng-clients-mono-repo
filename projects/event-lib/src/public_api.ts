@@ -1,0 +1,10 @@
+/*
+ * Public API Surface of event-lib
+ */
+
+export * from './lib/event-lib.module';
+export * from './lib/components/schedule/schedule.component';
+export * from './lib/components/day/day.component';
+export * from './lib/components/time-slot/time-slot.component';
+export * from './lib/services/model';
+export * from './lib/services/selectors';
