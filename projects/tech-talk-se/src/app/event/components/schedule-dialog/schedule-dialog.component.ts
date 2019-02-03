@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./schedule-dialog.component.scss']
 })
 export class ScheduleDialogComponent {
-  schedule: Observable<Schedule>;
+  schedule: Schedule;
 
   constructor(route: ActivatedRoute) {
     this.schedule = route.snapshot.data['schedule'];
