@@ -1,0 +1,23 @@
+<ul>
+  <li *ngFor="let talk of talks" [id]="talk.id">
+    <mat-card>
+      <mat-card-header>
+        <img *ngFor="let imgSrc of talk.speakerImgSources" mat-card-avatar [src]="imgSrc" alt="">
+        <mat-card-title>{{talk.title}}</mat-card-title>
+        <mat-card-subtitle>{{talk.speakerNames}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{talk.description}}</p>
+      </mat-card-content>
+
+      <div *ngFor="let speaker of talk.speakerDetails">
+        <mat-card-subtitle>{{speaker.name}}</mat-card-subtitle>
+        <mat-card-content>
+          <p>{{speaker.description}}</p>
+        </mat-card-content>
+      </div>
+    </mat-card>
+  </li>
+</ul>
+
+

@@ -25,11 +25,17 @@ export interface TimeSlot {
   isBreak?: boolean;
 }
 
+export interface Talks {
+  talks: TalkTo[];
+  presenters?: PresenterTo[];
+}
+
 // server model
 
 export interface EventTo {
   agenda: AgendaTo;
   presenters: PresenterTo[];
+  talks?: TalkTo[];
 }
 
 export interface AgendaTo {
@@ -63,10 +69,18 @@ export interface PresenterTo {
   position?: string;
   description?: string;
   organization?: string;
+  imgSrc?: string;
 }
 
 export interface StreamTo {
   id: number;
   name: string;
   color: string;
+}
+
+export interface TalkTo {
+  id: number;
+  title: string;
+  description?: string;
+  presenters: number[];
 }

@@ -20,6 +20,7 @@ import {
     MatIconModule,
     MatListModule,
     MatTabsModule,
+    MatCardModule,
     MatGridListModule,
     LayoutModule,
     MatCardModule

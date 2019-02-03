@@ -6,6 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ScheduleDialogComponent } from '../event/components/schedule-dialog/schedule-dialog.component';
 import { ScheduleDialogResolver } from '../event/components/schedule-dialog/schedule-dialog.resolver';
+import { TalkOverviewDialogComponent } from '../event/components/talk-overview-dialog/talk-overview-dialog.component';
+import { TalkOverviewDialogResolver } from '../event/components/talk-overview-dialog/talk-overview-dialog.resolver';
 
 @NgModule({
   declarations: [ShellComponent],
@@ -19,6 +21,13 @@ import { ScheduleDialogResolver } from '../event/components/schedule-dialog/sche
         component: ScheduleDialogComponent,
         resolve: {
           schedule: ScheduleDialogResolver
+        }
+      },
+      {
+        path: 'talks',
+        component: TalkOverviewDialogComponent,
+        resolve: {
+          talks: TalkOverviewDialogResolver
         }
       },
       {path: '', redirectTo: '/', pathMatch: 'full'}

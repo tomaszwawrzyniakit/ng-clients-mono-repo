@@ -1,4 +1,4 @@
-import { Day, DayTo, EventTo, PresenterTo, Schedule, TimeSlot, TimeSlotTo } from './model';
+import { Day, DayTo, EventTo, PresenterTo, Schedule, Talks, TimeSlot, TimeSlotTo } from './model';
 import * as _moment from 'moment';
 import { Moment } from 'moment';
 
@@ -16,6 +16,25 @@ export function selectSchedule(event: EventTo): Schedule {
       };
     }
   }
+}
+
+export function selectTalks(event: EventTo): Talks {
+  if (event) {
+    const {talks, presenters} = event;
+    if (talks) {
+      return {
+        talks, presenters
+      };
+    }
+  }
+}
+
+function selectPresentersByIds(presenterTos: PresenterTo[], presenterIds: number[]) {
+  let presenters = [];
+  if (presenterTos && presenterIds) {
+    presenters = presenterTos.filter(presenterTo => presenterIds.indexOf(presenterTo.id) !== -1);
+  }
+  return presenters;
 }
 
 function createDays(dayTos: DayTo[], presenterTos?: PresenterTo[]): Day[] {
