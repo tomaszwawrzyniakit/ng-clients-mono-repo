@@ -36,9 +36,7 @@
               "projects/event-lib/tsconfig.lib.json",
               "projects/event-lib/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -62,9 +60,7 @@
               "projects/tech-talk-se/src/favicon.ico",
               "projects/tech-talk-se/src/assets"
             ],
-            "styles": [
-              "projects/tech-talk-se/src/styles/styles.scss"
-            ],
+            "styles": ["projects/tech-talk-se/src/styles/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -90,7 +86,8 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "serviceWorker": true
             }
           }
         },
@@ -118,9 +115,7 @@
             "polyfills": "projects/tech-talk-se/src/polyfills.ts",
             "tsConfig": "projects/tech-talk-se/tsconfig.spec.json",
             "karmaConfig": "projects/tech-talk-se/karma.conf.js",
-            "styles": [
-              "projects/tech-talk-se/src/styles/styles.scss"
-            ],
+            "styles": ["projects/tech-talk-se/src/styles/styles.scss"],
             "scripts": [],
             "assets": [
               "projects/tech-talk-se/src/favicon.ico",
@@ -135,9 +130,7 @@
               "projects/tech-talk-se/tsconfig.app.json",
               "projects/tech-talk-se/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
