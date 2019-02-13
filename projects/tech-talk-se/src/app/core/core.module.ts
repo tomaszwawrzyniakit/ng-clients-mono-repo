@@ -8,9 +8,11 @@ import { ScheduleDialogComponent } from '../event/components/schedule-dialog/sch
 import { ScheduleDialogResolver } from '../event/components/schedule-dialog/schedule-dialog.resolver';
 import { TalkOverviewDialogComponent } from '../event/components/talk-overview-dialog/talk-overview-dialog.component';
 import { TalkOverviewDialogResolver } from '../event/components/talk-overview-dialog/talk-overview-dialog.resolver';
+import { AutoClosableSidenavDirective } from './shell/auto-closable-sidenav.directive';
 
 @NgModule({
-  declarations: [ShellComponent],
+  declarations: [ShellComponent,
+    AutoClosableSidenavDirective],
   imports: [
     SharedModule,
     HttpClientModule,
