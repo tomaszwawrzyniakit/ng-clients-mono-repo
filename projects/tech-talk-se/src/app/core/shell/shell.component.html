@@ -22,7 +22,6 @@
       <h1 class="app-name mat-headline">
         TechTalk Conf
       </h1>
-      <span class="fill-remaining-space"></span>
       <svg class="logo" viewBox="0 0 171 38">
         <g fill="none" fill-rule="evenodd">
           <path fill="#12ABDB" d="M163.434 22.698c3.728 0 6.607-3.038 6.644-6.64-.259-1.573-.81-4.483-4.893-4.483-4.464 0-5.945 6.24-9.58 10.262-.295 2.288-2.458 4.335-5.163 4.678.664.694 2.136 1.067 3.894 1.067 3.22 0 7.118-.969 9.157-2.982-2.72.035-4.47-1.713-4.643-4.136 1.327 1.608 2.827 2.234 4.584 2.234"/>
@@ -30,6 +29,8 @@
         </g>
       </svg>
     </mat-toolbar>
-    <router-outlet></router-outlet>
+    <div class="ea-body">
+        <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -16,20 +16,24 @@
     }
   }
 }
-
+.ea-body{
+  -ms-transform: translateY(64px);
+}
 .ea-toolbar {
-  color: $ea-white;
-
+  color: $ea-white;   
+  position: fixed;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
   h1.app-name {
     margin: 0 1em;
   }
 
   .logo {
+    margin-left: auto;   
+    margin-right: 0px;
     height: 1.8em;
     margin-top: 0.3em;
-  }
-
-  .fill-remaining-space {
-    flex: 1 1 auto;
   }
 }
