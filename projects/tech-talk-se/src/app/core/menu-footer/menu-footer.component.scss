@@ -1,0 +1,16 @@
+@import "../../../styles/variables";
+:host {
+  position: fixed;
+  bottom: 0px;
+
+  .content {
+    color: $ea-dark-grey;
+    padding: 10px;
+    padding: 0 21px;
+    .logo {
+      height: 1.6em;
+      margin-bottom: -0.3em;
+      max-width: 30px; /* IE use 100% by default*/
+    }
+  }
+}
