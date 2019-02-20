@@ -16,20 +16,21 @@ export class SwPushSubBtnComponent implements OnInit {
   alreadySubscribed = false;
   whileToggling = false;
 
+  debug = false;
+
   constructor(private swPush: SwPush,
               private subscription: SubscriptionService,
               @Inject(SW_PUB_SUB_VAPID_PUBLIC_KEY) private readonly vapidPublicKey: string) {
     this.swPushEnabled = swPush.isEnabled && !this.iOS();
   }
 
-  /* tslint:disable:no-console */
   ngOnInit(): void {
     if (this.swPushEnabled) {
       this.swPush.subscription.pipe(
         take(1),
       ).subscribe(pushSubscription => {
-        console.debug('Checking if already subscribed: ' + pushSubscription);
         this.alreadySubscribed = pushSubscription !== null;
+        this.log('Checking if already subscribed... ', this.alreadySubscribed ? 'yes' : 'no');
       });
     }
   }
@@ -47,28 +48,28 @@ export class SwPushSubBtnComponent implements OnInit {
   }
 
   private unsubscribe() {
-    console.debug('Unsubscribing...');
+    this.log('Unsubscribing...');
     this.swPush.subscription.pipe(
       take(1),
     ).subscribe((pushSubscription) => {
-      console.debug('Got current subscription... ', pushSubscription);
+      this.log('Got current subscription... ', pushSubscription);
       if (pushSubscription) {
-        console.debug('Calling pushSubscription.unsubscribe()...');
+        this.log('Calling pushSubscription.unsubscribe()...');
         pushSubscription.unsubscribe()
           .then(_ => {
-            console.debug('pushSubscription.unsubscribe() successful; calling the server...');
+            this.log('pushSubscription.unsubscribe() successful; calling the server...');
             this.subscription.doUnsubscribe(pushSubscription.endpoint).subscribe(() => {
               this.whileToggling = false;
               this.alreadySubscribed = false;
-              console.debug('Unsubscribing on the server successful');
+              this.log('Unsubscribing on the server successful');
             }, error => {
               this.whileToggling = false;
-              console.debug('Unsubscribing on the server failed', error);
+              this.log('Unsubscribing on the server failed', error);
             });
           })
           .catch(err => {
             this.whileToggling = false;
-            console.error('pushSubscription.unsubscribe() failed', err);
+            this.log('pushSubscription.unsubscribe() failed', err);
           });
       } else {
         this.whileToggling = false;
@@ -76,30 +77,37 @@ export class SwPushSubBtnComponent implements OnInit {
       }
     }, error => {
       this.whileToggling = false;
-      console.debug('Error while getting current subscription... ' + error);
+      this.log('Error while getting current subscription... ', error);
     });
   }
 
   private subscribe() {
-    console.debug('Calling swPush.requestSubscription()');
+    this.log('Calling swPush.requestSubscription()');
     this.swPush.requestSubscription({
       serverPublicKey: this.vapidPublicKey
     })
       .then(sub => {
-        console.debug('swPush.requestSubscription() successful; calling the server', sub);
+        this.log('swPush.requestSubscription() successful; calling the server', sub);
         this.subscription.doSubscribe(sub).subscribe(_ => {
           this.whileToggling = false;
           this.alreadySubscribed = true;
-          console.debug('Subscribing on the server successful');
+          this.log('Subscribing on the server successful');
         }, error => {
           this.whileToggling = false;
-          console.debug('Subscribing on the server failed' + error);
+          this.log('Subscribing on the server failed', error);
         });
       })
       .catch(err => {
         this.whileToggling = false;
-        console.debug('swPush.requestSubscription() failed', err);
+        this.log('swPush.requestSubscription() failed', err);
       });
+  }
+
+  /* tslint:disable:no-console */
+  private log(...items: any[]) {
+    if (this.debug) {
+      console.log(items);
+    }
   }
 
   private iOS() {
