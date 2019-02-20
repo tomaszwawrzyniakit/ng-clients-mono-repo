@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { Day, StreamTo, TimeSlot } from '../../services/model';
 import { compareByStartTimeAndStream, compareSimpleValues } from '../../services/selectors';
 import * as _moment from 'moment';
@@ -26,6 +26,9 @@ export interface DayAndStreams {
 export class DayComponent {
   @ViewChild('dayGrid')
   dayGridElement: ElementRef;
+
+  @Output()
+  timeSlotClick = new EventEmitter<TimeSlot>();
 
   @Input()
   set dayAndStreams(value: DayAndStreams) {
@@ -55,6 +58,12 @@ export class DayComponent {
 
   getIdForTimeRow(startTime: string): string {
     return startTime && startTime.replace(':', '');
+  }
+
+  timeSlotClicked(timeSlot: TimeSlot) {
+    if (timeSlot.isClickable) {
+      this.timeSlotClick.emit(timeSlot);
+    }
   }
 
   scrollToCurrentTime() {

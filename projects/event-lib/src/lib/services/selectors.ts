@@ -61,6 +61,7 @@ function createTimeSlots(timeSlotTos: TimeSlotTo[], presenterTos?: PresenterTo[]
     timeSlots = timeSlotTos
       .map(timeSlotTo => ({
           ...timeSlotTo,
+          isClickable: timeSlotTo.talk != null,
           presenters: presenters.joinNamesOf(timeSlotTo.presenters)
         })
       );

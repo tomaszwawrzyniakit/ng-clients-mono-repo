@@ -1,5 +1,5 @@
-<ul>
-  <li *ngFor="let talk of talks" [id]="talk.id">
+<ul #listContainer>
+  <li *ngFor="let talk of talks" [id]="createTalkId(talk.id)">
     <mat-card>
       <mat-card-header>
         <img *ngFor="let imgSrc of talk.speakerImgSources" mat-card-avatar [src]="imgSrc" alt="">

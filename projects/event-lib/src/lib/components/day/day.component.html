@@ -13,11 +13,13 @@
   <div class="ea-schedule-grid time-slots" *ngFor="let startTime of startTimes" [id]="getIdForTimeRow(startTime)">
     <div class="cell time">{{startTime}}</div>
     <div class="sub-grid" [style.grid-template-columns]="gridTemplateColumnsCssProp">
-      <div class="cell time-slot" *ngFor="let timeSlotGridItem of timeSlotGridItemsByStartTimes[startTime]"
+      <div matRipple [matRippleDisabled]="!timeSlotGridItem.timeSlot.isClickable" class="cell time-slot"
+           *ngFor="let timeSlotGridItem of timeSlotGridItemsByStartTimes[startTime]"
+           (click)="timeSlotClicked(timeSlotGridItem.timeSlot)"
            [style.grid-column-end]="'span ' + timeSlotGridItem.colSpan"
            [style.background]="timeSlotGridItem.bgColor"
            [style.color]="timeSlotGridItem.textColor"
-           [class.break-slot]="timeSlotGridItem.timeSlot.isBreak">
+           [ngClass]="{'break-slot': timeSlotGridItem.timeSlot.isBreak, 'clickable': timeSlotGridItem.timeSlot.isClickable}">
         <elib-time-slot [timeSlot]="timeSlotGridItem.timeSlot"></elib-time-slot>
       </div>
     </div>

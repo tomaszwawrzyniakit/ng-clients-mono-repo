@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { MatIconModule, MatTabsModule } from '@angular/material';
+import { MatIconModule, MatRippleModule, MatTabsModule } from '@angular/material';
 
 @NgModule({
-  exports: [MatTabsModule, MatIconModule]
+  exports: [MatTabsModule, MatIconModule, MatRippleModule]
 })
 export class ElibNgMaterialModule {
 }

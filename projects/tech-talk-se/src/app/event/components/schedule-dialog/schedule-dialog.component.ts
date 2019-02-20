@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Schedule } from 'event-lib';
-import { ActivatedRoute } from '@angular/router';
+import { Schedule, TimeSlot } from 'event-lib';
+import { ActivatedRoute, Router } from '@angular/router';
+import { createTalkId } from '../talk-overview-dialog/talk-overview-dialog.component';
 
 @Component({
   selector: 'tt-schedule-dialog',
@@ -10,7 +11,11 @@ import { ActivatedRoute } from '@angular/router';
 export class ScheduleDialogComponent {
   schedule: Schedule;
 
-  constructor(route: ActivatedRoute) {
+  constructor(route: ActivatedRoute, private router: Router) {
     this.schedule = route.snapshot.data['schedule'];
+  }
+
+  navigateToTalks(timeSlot: TimeSlot) {
+    this.router.navigate(['/talks'], {fragment: createTalkId(timeSlot.talk)});
   }
 }

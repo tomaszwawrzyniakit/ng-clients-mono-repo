@@ -1,6 +1,6 @@
-import { AfterContentChecked, Component, Input, QueryList, ViewChildren } from '@angular/core';
+import { AfterContentChecked, Component, EventEmitter, Input, Output, QueryList, ViewChildren } from '@angular/core';
 import * as _moment from 'moment';
-import { Day, Schedule } from '../../services/model';
+import { Day, Schedule, TimeSlot } from '../../services/model';
 import { DayComponent } from '../day/day.component';
 
 const moment = _moment; // workaround for Rollup
@@ -37,6 +37,13 @@ export class ScheduleComponent implements AfterContentChecked {
     }
 
     this._schedule = value;
+  }
+
+  @Output()
+  timeSlotClick = new EventEmitter<TimeSlot>();
+
+  timeSlotOfDayClicked(timeSlot: TimeSlot) {
+    this.timeSlotClick.emit(timeSlot);
   }
 
   scrollToCurrentTimeSlot() {

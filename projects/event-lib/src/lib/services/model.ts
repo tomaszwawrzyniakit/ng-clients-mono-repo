@@ -19,6 +19,8 @@ export interface TimeSlot {
   startTime: string;
   endTime: string;
   presenters?: string;
+  talk?: number;
+  isClickable?: boolean;
   stream?: number;
   description?: string;
   room?: string;
@@ -57,6 +59,7 @@ export interface TimeSlotTo {
   startTime: string;
   endTime: string;
   presenters?: number[];
+  talk?: number;
   stream?: number;
   description?: string;
   room?: string;

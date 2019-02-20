@@ -40,6 +40,10 @@
 
     .time-slot {
       background: $elib-vibrant-blue;
+      &.clickable {
+        cursor: pointer;
+        user-select: none;
+      }
     }
   }
 

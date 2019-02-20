@@ -3,11 +3,13 @@
                (animationDone)="scrollToCurrentTimeSlot()"
                [selectedIndex]="initialDayIndex">
   <mat-tab *ngFor="let day of schedule.days; let i = index" label="DAY {{i + 1}}">
-    <elib-day [dayAndStreams]="{day: day, streams: schedule.streams}"></elib-day>
+    <elib-day [dayAndStreams]="{day: day, streams: schedule.streams}"
+              (timeSlotClick)="timeSlotOfDayClicked($event)"></elib-day>
   </mat-tab>
 </mat-tab-group>
 <elib-day *ngIf="scheduleHasJustOneDay"
-          [dayAndStreams]="{day: schedule.days[0], streams: schedule.streams}"></elib-day>
+          [dayAndStreams]="{day: schedule.days[0], streams: schedule.streams}"
+          (timeSlotClick)="timeSlotOfDayClicked($event)"></elib-day>
 <h3 *ngIf="noScheduleAvailable"
     class="mat-subheading-1" >
   The agenda could not be loaded.
