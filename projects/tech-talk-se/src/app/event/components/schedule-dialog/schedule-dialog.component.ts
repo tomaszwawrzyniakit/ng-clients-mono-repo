@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Schedule } from 'event-lib';
 import { ActivatedRoute } from '@angular/router';
 
