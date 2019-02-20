@@ -11,6 +11,7 @@ import { TalkOverviewDialogComponent } from '../event/components/talk-overview-d
 import { TalkOverviewDialogResolver } from '../event/components/talk-overview-dialog/talk-overview-dialog.resolver';
 import { AutoClosableSidenavDirective } from './shell/auto-closable-sidenav.directive';
 import { MenuFooterComponent } from './menu-footer/menu-footer.component';
+import { SwPushSubModule } from 'event-lib';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,10 @@ import { MenuFooterComponent } from './menu-footer/menu-footer.component';
       },
       {path: '', redirectTo: '/', pathMatch: 'full'}
     ]),
+    SwPushSubModule.forRoot({
+      vapidPublicKey: 'BB1ZDDVcnKwB-Pv4aXGB3WP6QmLdSPU6FNPJe9TBrhrajsXF0mLiaSFd7A7ZBfxhw5fUk42N435psrsKvz_Mgko',
+      serverUri: 'api/subscription'
+    })
   ],
   exports: [ShellComponent]
 })
