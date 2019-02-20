@@ -1,0 +1,10 @@
+@import '../../styles/variables';
+
+:host {
+  display: block;
+  align-self: center;
+}
+
+mat-icon {
+  color: $elib-cg-blue;
+}
