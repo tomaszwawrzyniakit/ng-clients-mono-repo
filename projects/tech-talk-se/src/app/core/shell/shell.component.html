@@ -12,7 +12,7 @@
         <mat-icon>exit_to_app</mat-icon>
       </mat-list-item>
       <mat-list-item (click)="pubSubBtn.togglePushNotifications()">
-        <span *ngIf="pubSubBtn.swPushEnabled">Be notified</span>
+        <span *ngIf="pubSubBtn.swPushEnabled">{{pubSubBtn.alreadySubscribed ? 'Unsubscribe' : 'Be notified'}}</span>&nbsp;
         <elib-sw-push-sub-btn #pubSubBtn="swPubSubBtn"></elib-sw-push-sub-btn>
       </mat-list-item>
     </mat-nav-list>
