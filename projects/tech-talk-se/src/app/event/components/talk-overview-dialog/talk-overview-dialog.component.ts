@@ -59,7 +59,7 @@ export class TalkOverviewDialogComponent implements AfterViewInit {
       if (this.listContainer && this.listContainer.nativeElement) {
         const talkElement = this.listContainer.nativeElement.querySelector(`#${talkId}`);
         if (talkElement && talkElement.scrollIntoView) {
-          talkElement.scrollIntoView();
+          talkElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }
     });
