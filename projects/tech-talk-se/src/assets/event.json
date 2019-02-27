@@ -39,7 +39,7 @@
             "id": 104,
             "startTime": "10:15",
             "endTime": "11:00",
-            "name": "Serverless Java with Kubernetes",
+            "name": "Serverless Java on Kubernetes",
             "talk": 2,
             "presenters": [3],
             "room": "Java Room",
@@ -285,7 +285,7 @@
     },
     {
       "id": 3,
-      "name": "Krzystof Sobkowiak",
+      "name": "Krzysztof Sobkowiak",
       "description": "Programista Java i starszy architekt oprogramowania w Capgemini – a do tego członek Apache Software Foundation, który wędruje po górach, ogląda horrory i kocha festiwale muzyki metalowej.",
       "imgSrc": "assets/img/krzysztof-sobkowiak.jpg"
     },
