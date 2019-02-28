@@ -16,12 +16,19 @@
     }
   }
 }
-.mat-drawer-side ~ .mat-drawer-content > .ea-body {
-  -ms-transform: translateY($ea-toolbar-height);
+.mat-drawer-side ~ .mat-drawer-content {
+  scroll-padding-top: $ea-toolbar-height + 2;
+  & > .ea-body {
+    -ms-transform: translateY($ea-toolbar-height);
+  }
 }
-.mat-drawer-over ~ .mat-drawer-content > .ea-body {
-  -ms-transform: translateY($ea-toolbar-height-mobile);
+.mat-drawer-over ~ .mat-drawer-content {
+  scroll-padding-top: $ea-toolbar-height-mobile + 2;
+  & > .ea-body {
+    -ms-transform: translateY($ea-toolbar-height-mobile);
+  }
 }
+
 .ea-toolbar {
   color: $ea-white;
   position: fixed;
