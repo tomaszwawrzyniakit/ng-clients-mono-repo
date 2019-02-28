@@ -22,7 +22,7 @@
             "startTime": "09:00",
             "endTime": "09:15",
             "name": "Welcome + Organisation",
-            "room": "Plenum",
+            "room": "JavaScript Room 9",
             "isBreak": false
           },
           {
@@ -32,7 +32,7 @@
             "name": "Keep Betting On JavaScript",
             "talk": 1,
             "presenters": [1],
-            "room": "Plenum",
+            "room": "JavaScript Room 9",
             "isBreak": false
           },
           {
@@ -42,7 +42,7 @@
             "name": "Serverless Java on Kubernetes",
             "talk": 2,
             "presenters": [3],
-            "room": "Java Room",
+            "room": "Java Room 6",
             "stream": 1,
             "isBreak": false
           },
@@ -51,7 +51,7 @@
             "startTime": "10:15",
             "endTime": "11:00",
             "name": "Stop building monolithic frontends!",
-            "room": "JavaScript Room",
+            "room": "JavaScript Room 9",
             "talk": 3,
             "presenters": [4],
             "stream": 2,
@@ -71,7 +71,7 @@
             "name": "Zmiana kodowania ISO8859 na UTF8 - migracja bazy Oracle 12c",
             "talk": 4,
             "presenters": [12],
-            "room": "Java Room",
+            "room": "Java Room 6",
             "stream": 1,
             "isBreak": false
           },
@@ -81,7 +81,7 @@
             "endTime": "12:00",
             "name": "Hybrid Mobile App Development with Ionic",
             "talk": 5,
-            "room": "JavaScript Room",
+            "room": "JavaScript Room 9",
             "presenters": [13],
             "stream": 2,
             "isBreak": false
@@ -91,7 +91,7 @@
             "startTime": "12:00",
             "endTime": "12:45",
             "name": " Distributed system integration using Apache Camel and Spring Boot",
-            "room": "Java Room",
+            "room": "Java Room 6",
             "talk": 6,
             "presenters": [6],
             "stream": 1,
@@ -102,7 +102,7 @@
             "startTime": "12:00",
             "endTime": "12:45",
             "name": "JavaScript w cyberprzestrzeni hakerów",
-            "room": "JavaScript Room",
+            "room": "JavaScript Room 9",
             "talk": 7,
             "presenters": [5],
             "stream": 2,
@@ -115,7 +115,7 @@
             "name": "Heal the code make it a better place. Power of code review",
             "talk": 8,
             "presenters": [7],
-            "room": "Java Room",
+            "room": "Java Room 6",
             "stream": 1,
             "isBreak": false
           },
@@ -124,7 +124,7 @@
             "startTime": "12:45",
             "endTime": "13:20",
             "name": "Web Components czyli Angular, React i VanillaJS w jednym stali DOM-u",
-            "room": "JavaScript Room",
+            "room": "JavaScript Room 9",
             "talk": 9,
             "presenters": [8],
             "stream": 2,
@@ -142,7 +142,7 @@
             "startTime": "14:20",
             "endTime": "15:00",
             "name": "Zastosowanie podejścia Consumer Driven Contracts w architekturze Mikroserwisów",
-            "room": "Java Room",
+            "room": "Java Room 6",
             "talk": 10,
             "presenters": [9],
             "stream": 1,
@@ -155,7 +155,7 @@
             "name": "Vue.js: Come on! yet another JavaScript framework?!",
             "talk": 11,
             "presenters": [10, 11],
-            "room": "JavaScript Room",
+            "room": "JavaScript Room 9",
             "stream": 2,
             "isBreak": false
           },
@@ -166,7 +166,7 @@
             "name": "I jeszcze jeden język...",
             "talk": 20,
             "presenters": [2],
-            "room": "Plenum",
+            "room": "JavaScript Room 9",
             "isBreak": false
           },
           {
@@ -174,7 +174,7 @@
             "startTime": "16:00",
             "endTime": "16:15",
             "name": "Closing",
-            "room": "Plenum",
+            "room": "JavaScript Room 9",
             "isBreak": false
           }
         ]
