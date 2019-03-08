@@ -7,11 +7,11 @@ import { EventLibModule, SwPushSubModule } from 'event-lib';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { DefaultSummitDialogComponent } from './components/default-summit-dialog/default-summit-dialog.component';
 import { HomeComponent } from './components/home/home.component';
+import { MenuFooterComponent } from './components/menu-footer/menu-footer.component';
 
 @NgModule({
   declarations: [SummitSelectionComponent, SummitAppShellComponent, ScheduleDialogComponent, SideNavComponent,
-    DefaultSummitDialogComponent,
-    HomeComponent],
+    DefaultSummitDialogComponent, HomeComponent, MenuFooterComponent],
   imports: [
     SharedModule, SwPushSubModule, EventLibModule
   ],
