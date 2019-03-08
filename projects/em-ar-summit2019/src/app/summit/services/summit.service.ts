@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { EventTo, Schedule, selectSchedule } from 'event-lib';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../../../tech-talk-se/src/environments/environment';
 import { map, shareReplay } from 'rxjs/operators';
+import { environment } from '../../../environments/environment';
 
 export interface Summit {
   name: string;
@@ -44,6 +44,9 @@ export class SummitService {
 
   private getEvent(summit: Summit): Observable<EventTo> {
     const url = environment.production ? `api/event/${summit.name}` : `assets/${summit.name}/event.json`;
+
+    console.log('environment.production: ', environment.production);
+    console.log('Calling: ', url);
 
     if (!this.cachedEventData[summit.name]) {
       this.cachedEventData[summit.name] = this.http.get<EventTo>(url).pipe(
