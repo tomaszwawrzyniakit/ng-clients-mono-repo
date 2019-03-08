@@ -1,0 +1,53 @@
+@import "../../../../styles/variables";
+
+.sidenav-container {
+  height: 100%;
+
+  .sidenav {
+    width: 200px;
+
+    .mat-toolbar {
+      background: inherit;
+      &.mat-primary {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
+.mat-drawer-side ~ .mat-drawer-content {
+  scroll-padding-top: $ea-toolbar-height + 2;
+  & > .ea-body {
+    -ms-transform: translateY($ea-toolbar-height);
+  }
+}
+.mat-drawer-over ~ .mat-drawer-content {
+  scroll-padding-top: $ea-toolbar-height-mobile + 2;
+  & > .ea-body {
+    -ms-transform: translateY($ea-toolbar-height-mobile);
+  }
+}
+
+.ea-toolbar {
+  color: $ea-white;
+  position: fixed;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  h1.app-name {
+    display: inline;
+    margin: 0 1em;
+  }
+
+  .logo {
+    display: inline;
+    margin-left: auto;
+    margin-right: 0px;
+    height: 1.8em;
+    margin-top: 0.3em;
+    max-width: 162px;
+    -ms-transform: translateY(12px);
+  }
+}

@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Set as default?</h1>
+<div mat-dialog-content>
+  <p>Would you like to set {{data.summit.name}} as your default?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="">No Thanks</button>
+  <button mat-button [mat-dialog-close]="setAsDefaultValue" cdkFocusInitial>Ok</button>
+</div>

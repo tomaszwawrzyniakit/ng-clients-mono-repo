@@ -9,15 +9,13 @@ import { ScheduleDialogComponent } from '../event/components/schedule-dialog/sch
 import { ScheduleDialogResolver } from '../event/components/schedule-dialog/schedule-dialog.resolver';
 import { TalkOverviewDialogComponent } from '../event/components/talk-overview-dialog/talk-overview-dialog.component';
 import { TalkOverviewDialogResolver } from '../event/components/talk-overview-dialog/talk-overview-dialog.resolver';
-import { AutoClosableSidenavDirective } from './shell/auto-closable-sidenav.directive';
 import { MenuFooterComponent } from './menu-footer/menu-footer.component';
 import { SwPushSubModule } from 'event-lib';
 
 @NgModule({
   declarations: [
     ShellComponent,
-    MenuFooterComponent,
-    AutoClosableSidenavDirective],
+    MenuFooterComponent],
   imports: [
     SharedModule,
     HttpClientModule,
