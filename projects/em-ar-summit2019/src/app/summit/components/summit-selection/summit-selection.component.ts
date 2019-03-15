@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material';
 import { DefaultSummitDialogComponent, setAsDefault } from '../default-summit-dialog/default-summit-dialog.component';
 
 export function createNavigateCommandsOf(summit: Summit) {
-  return [`/${summit.name}`, {outlets: {sidenav: summit.name}}];
+  return [`/${summit.name}`];
 }
 
 export function navigateUsing(router: Router) {

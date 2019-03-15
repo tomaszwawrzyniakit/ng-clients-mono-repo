@@ -1,0 +1,19 @@
+:host {
+  background: rgb(98, 46, 107);
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+
+  img {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
