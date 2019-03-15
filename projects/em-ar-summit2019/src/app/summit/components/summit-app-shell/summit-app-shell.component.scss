@@ -20,12 +20,14 @@
   scroll-padding-top: $ea-toolbar-height + 2;
   & > .ea-body {
     -ms-transform: translateY($ea-toolbar-height);
+    height: calc(100% - #{$ea-toolbar-height});
   }
 }
 .mat-drawer-over ~ .mat-drawer-content {
   scroll-padding-top: $ea-toolbar-height-mobile + 2;
   & > .ea-body {
     -ms-transform: translateY($ea-toolbar-height-mobile);
+    height: calc(100% - #{$ea-toolbar-height-mobile});
   }
 }
 
