@@ -18,12 +18,8 @@
   <mat-card class="hotel-card">
     <mat-card-header>
       <mat-icon>add_location</mat-icon>
-      <mat-card-title
-        ><h2 class="mat-title">{{ place.name }}</h2></mat-card-title
-      >
-    </mat-card-header>
-    <mat-card-header *ngIf="place.subtitle">
-      <mat-card-title>{{ place.subtitle }}</mat-card-title>
+      <mat-card-title><h2 class="mat-title">{{ place.name }}</h2></mat-card-title>
+      <mat-card-subtitle *ngIf="place.subtitle"><h3>{{ place.subtitle }}</h3></mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <p class="address mat-body-1">
