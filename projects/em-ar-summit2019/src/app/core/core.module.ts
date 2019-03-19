@@ -13,13 +13,22 @@ import { HomeComponent } from '../summit/components/home/home.component';
 import { BuildingPlanComponent } from '../summit/components/building-plan/building-plan.component';
 import { WroSideNavComponent } from '../summit/arch-wro/components/wro-side-nav/wro-side-nav.component';
 import { EmPnqSideNavComponent } from '../summit/em-png/components/em-pnq-side-nav/em-pnq-side-nav.component';
+import { VenueComponent } from '../summit/components/venue/venue.component';
+import { VenueDialogResolver } from '../summit/components/venue/venue-dialog.resolver';
 
-const genericScheduleDialog = {
+const scheduleDialogRoute = {
   path: '',
   component: ScheduleDialogComponent,
   resolve: {
     schedule: ScheduleDialogResolver
   }
+};
+const venueRoute = {
+  path: 'venue',
+  resolve: {
+    hotels: VenueDialogResolver
+  },
+  component: VenueComponent
 };
 @NgModule({
   declarations: [],
@@ -48,7 +57,8 @@ const genericScheduleDialog = {
           {
             path: 'arch-wro',
             children: [
-              genericScheduleDialog,
+              scheduleDialogRoute,
+              venueRoute,
               {
                 path: '',
                 component: WroSideNavComponent,
@@ -67,13 +77,14 @@ const genericScheduleDialog = {
           {
             path: 'em-pnq',
             children: [
-              genericScheduleDialog,
+              scheduleDialogRoute,
+              venueRoute,
               {
                 path: '',
                 component: EmPnqSideNavComponent,
                 outlet: 'sidenav',
                 data: {
-                  feedBackUrl : 'https://www.capgemini.com/'
+                  feedBackUrl: 'https://www.capgemini.com/'
                 }
               },
               {
@@ -89,7 +100,7 @@ const genericScheduleDialog = {
           {
             path: ':summitName',
             children: [
-              genericScheduleDialog,
+              scheduleDialogRoute,
               {
                 path: '',
                 component: SideNavComponent,

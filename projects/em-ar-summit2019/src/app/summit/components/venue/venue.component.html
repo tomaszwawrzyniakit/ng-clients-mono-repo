@@ -1,0 +1,34 @@
+<div class="hotel-info-new" *ngFor="let hotel of hotels">
+  <mat-card class="hotel-card">
+    <mat-card-header>
+      <mat-icon>add_location</mat-icon>
+      <mat-card-title
+        ><h2 class="mat-title">{{ hotel.name }}</h2></mat-card-title
+      >
+    </mat-card-header>
+    <mat-card-header *ngIf="hotel.subtitle">
+      <mat-card-title
+        >{{ hotel.subtitle }}</mat-card-title
+      >
+    </mat-card-header>
+    <mat-card-content>
+      <p class="address mat-body-1">
+        <span *ngFor="let adresLine of hotel.adres">{{ adresLine }}</span>
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-raised-button href="{{ hotel.navigateUrl }}" target="_blank">
+        <mat-icon>directions</mat-icon><span class="icon-label">Navigate</span>
+      </a>
+      <a
+        mat-raised-button
+        *ngFor="let contact of hotel.contactUrls"
+        href="{{ contact.url }}"
+        target="_blank"
+      >
+        <mat-icon>phone</mat-icon
+        ><span class="icon-label">Call {{ contact.name }}</span>
+      </a>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -12,6 +12,7 @@ import { MenuFooterComponent } from './components/menu-footer/menu-footer.compon
 import { WroSideNavComponent } from './arch-wro/components/wro-side-nav/wro-side-nav.component';
 import { BuildingPlanComponent } from './components/building-plan/building-plan.component';
 import { EmPnqSideNavComponent } from './em-png/components/em-pnq-side-nav/em-pnq-side-nav.component';
+import { VenueComponent } from './components/venue/venue.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { EmPnqSideNavComponent } from './em-png/components/em-pnq-side-nav/em-pn
     MenuFooterComponent,
     WroSideNavComponent,
     EmPnqSideNavComponent,
+    VenueComponent,
     BuildingPlanComponent
   ],
   imports: [SharedModule, SwPushSubModule, EventLibModule],
