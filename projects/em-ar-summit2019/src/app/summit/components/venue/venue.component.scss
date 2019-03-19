@@ -1,0 +1,30 @@
+.hotel-info-new {
+  margin: 24px;
+
+  .hotel-card {
+    margin: 0;
+    text-align: center;
+
+    .mat-card-header {
+      justify-content: center;
+    }
+
+    .address {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .icon-label {
+      margin-left: 0.3em;
+      text-transform: uppercase;
+    }
+
+    .mat-card-actions {
+      padding: 0;
+    }
+  }
+}
+
+agm-map {
+  height: 300px;
+}

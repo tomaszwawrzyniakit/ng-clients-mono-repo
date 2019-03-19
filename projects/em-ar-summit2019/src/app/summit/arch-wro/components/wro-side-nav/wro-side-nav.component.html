@@ -1,9 +1,11 @@
 <mat-nav-list>
   <a mat-list-item [routerLink]="summitScheduleNavigateCommands">Schedule</a>
-  <a mat-list-item [routerLink]="['building-plan']">Room plan</a>
+  <a mat-list-item routerLink="building-plan">Room plan</a>  
+  <a mat-list-item routerLink="venue">Venue</a>
   <a mat-list-item routerLink="/summit-selection">Switch to another summit</a>
   <mat-list-item (click)="pubSubBtn.togglePushNotifications()">
-    <span *ngIf="pubSubBtn.swPushEnabled">{{pubSubBtn.alreadySubscribed ? 'Unsubscribe' : 'Be notified'}}</span>&nbsp;
+    <span *ngIf="pubSubBtn.swPushEnabled">{{ pubSubBtn.alreadySubscribed ? "Unsubscribe" : "Be notified" }}</span
+    >&nbsp;
     <elib-sw-push-sub-btn #pubSubBtn="swPubSubBtn"></elib-sw-push-sub-btn>
   </mat-list-item>
 </mat-nav-list>
