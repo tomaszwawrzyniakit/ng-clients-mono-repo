@@ -58,7 +58,7 @@ const genericScheduleDialog = {
                 path: 'building-plan',
                 component: BuildingPlanComponent,
                 data: {
-                  imgSrc: 'assets/arch-wro/building-plan.png',
+                  imgSrc: 'assets/arch-wro/room-plan-wro.png',
                   backgroundColor: '#622e6b'
                 }
               }
