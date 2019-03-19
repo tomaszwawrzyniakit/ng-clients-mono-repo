@@ -45,9 +45,6 @@ export class SummitService {
   private getEvent(summit: Summit): Observable<EventTo> {
     const url = environment.production ? `api/event/${summit.name}` : `assets/${summit.name}/event.json`;
 
-    console.log('environment.production: ', environment.production);
-    console.log('Calling: ', url);
-
     if (!this.cachedEventData[summit.name]) {
       this.cachedEventData[summit.name] = this.http.get<EventTo>(url).pipe(
         shareReplay(1)
