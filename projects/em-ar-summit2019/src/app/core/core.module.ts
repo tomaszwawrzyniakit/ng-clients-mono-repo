@@ -10,8 +10,9 @@ import { SwPushSubModule } from 'event-lib';
 import { SideNavComponent } from '../summit/components/side-nav/side-nav.component';
 import { ScheduleDialogResolver } from '../summit/components/schedule-dialog/schedule-dialog.resolver';
 import { HomeComponent } from '../summit/components/home/home.component';
-import { BuildingPlanComponent } from '../summit/arch-wro/components/building-plan/building-plan.component';
+import { BuildingPlanComponent } from '../summit/components/building-plan/building-plan.component';
 import { WroSideNavComponent } from '../summit/arch-wro/components/wro-side-nav/wro-side-nav.component';
+import { EmPnqSideNavComponent } from '../summit/em-png/components/em-pnq-side-nav/em-pnq-side-nav.component';
 
 const genericScheduleDialog = {
   path: '',
@@ -55,7 +56,33 @@ const genericScheduleDialog = {
               },
               {
                 path: 'building-plan',
-                component: BuildingPlanComponent
+                component: BuildingPlanComponent,
+                data: {
+                  imgSrc: 'assets/arch-wro/building-plan.png',
+                  backgroundColor: '#622e6b'
+                }
+              }
+            ]
+          },
+          {
+            path: 'em-pnq',
+            children: [
+              genericScheduleDialog,
+              {
+                path: '',
+                component: EmPnqSideNavComponent,
+                outlet: 'sidenav',
+                data: {
+                  feedBackUrl : 'https://www.capgemini.com/'
+                }
+              },
+              {
+                path: 'building-plan',
+                component: BuildingPlanComponent,
+                data: {
+                  imgSrc: 'assets/em-pnq/meeting-room-location-pnq.png',
+                  backgroundColor: '#ffffff'
+                }
               }
             ]
           },

@@ -10,7 +10,8 @@ import { DefaultSummitDialogComponent } from './components/default-summit-dialog
 import { HomeComponent } from './components/home/home.component';
 import { MenuFooterComponent } from './components/menu-footer/menu-footer.component';
 import { WroSideNavComponent } from './arch-wro/components/wro-side-nav/wro-side-nav.component';
-import { BuildingPlanComponent } from './arch-wro/components/building-plan/building-plan.component';
+import { BuildingPlanComponent } from './components/building-plan/building-plan.component';
+import { EmPnqSideNavComponent } from './em-png/components/em-pnq-side-nav/em-pnq-side-nav.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { BuildingPlanComponent } from './arch-wro/components/building-plan/build
     HomeComponent,
     MenuFooterComponent,
     WroSideNavComponent,
+    EmPnqSideNavComponent,
     BuildingPlanComponent
   ],
   imports: [SharedModule, SwPushSubModule, EventLibModule],
