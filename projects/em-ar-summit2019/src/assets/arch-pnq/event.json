@@ -15,14 +15,14 @@
             "startTime": "07:00",
             "endTime": "08:15",
             "name": "Breakfast at Hotel",
-            "isBreak": false
+            "isBreak": true
           },
           {
             "id": 102,
             "startTime": "08:30",
             "endTime": "09:15",
             "name": "Bus Travel to Campus",
-            "isBreak": false
+            "isBreak": true
           },
           {
             "id": 103,

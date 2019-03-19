@@ -11,45 +11,101 @@
         "date": "2019-03-22",
         "timeSlots": [
           {
+            "id": 99,
+            "startTime": "07:30",
+            "endTime": "08:30",
+            "name": "Breakfast at Hotel ZIP BY SPREE",
+            "isBreak": true
+          },{
+            "id": 100,
+            "startTime": "08:30",
+            "endTime": "09:30",
+            "name": "Bus Travel from Hotel to Capgemini University Campus, Hinjewadi",
+            "isBreak": true
+          },
+          {
             "id": 101,
             "startTime": "09:30",
-            "endTime": "09:45",
+            "endTime": "10:00",
             "name": "Opening Speech",
+            "presenters": [8, 9, 10],
+            "room": "Auditorium",
             "isBreak": false
           },
           {
             "id": 102,
-            "startTime": "09:45",
-            "endTime": "10:00",
-            "name": "Speech by NARU",
-            "isBreak": false
-          },
-          {
-            "id": 103,
             "startTime": "10:00",
-            "endTime": "10:15",
-            "name": "Brief on Activity, Sequence AR and EM Work Streams",
+            "endTime": "10:30",
+            "name": "Brief on Agenda and Streams",
+            "presenters": [11, 12],
+            "room": "Training Room 3A",
             "isBreak": false
           },
           {
             "id": 104,
             "startTime": "10:30",
             "endTime": "11:00",
-            "name": "Break",
+            "name": "Tea & Coffee Break",
             "isBreak": true
           },
           {
-            "id": 105,
+            "id": 1051,
             "startTime": "11:00",
             "endTime": "12:30",
-            "name": "EM Stream 2 - Deliver (with AR + EM)",
+            "name": "Stream \"Deliver\": Effective Testing – Make software better",
+            "room": "Training Room 3A",
+            "presenters": [13, 14],
+            "stream": 1,
             "isBreak": false
           },
           {
-            "id": 106,
+            "id": 1052,
+            "startTime": "11:00",
+            "endTime": "12:30",
+            "name": "Stream \"Deliver\": EM & AR Collaboration to Deliver",
+            "room": "Training Room 3B",
+            "presenters": [15, 16, 17, 18, 19],
+            "stream": 2,
+            "isBreak": false
+          },
+          {
+            "id": 1053,
+            "startTime": "11:00",
+            "endTime": "12:30",
+            "name": "Stream \"Deliver\": Adoption of Software Quality & Measurement Criteria",
+            "room": "Training Room 3D",
+            "presenters": [20, 21, 22, 23],
+            "stream": 3,
+            "isBreak": false
+          },
+          {
+            "id": 1061,
             "startTime": "12:30",
             "endTime": "13:30",
-            "name": "EM Stream 1 - Unified Solutions",
+            "name": "Stream \"Unified Solutions\": X-Tech in Automotive",
+            "stream": 1,
+            "room": "Training Room 3A",
+            "presenters": [24],
+            "isBreak": false
+          },
+          {
+            "id": 1062,
+            "startTime": "12:30",
+            "endTime": "13:30",
+            "name": "Stream \"Unified Solutions\": B/S/H-project",
+            "stream": 2,
+            "room": "Training Room 3B",
+            "presenters": [25],
+            "isBreak": false
+          },
+          {
+            "id": 1063,
+            "startTime": "12:30",
+            "endTime": "13:30",
+            "name": "Stream \"Unified Solutions\": Solution to accelerate benefits -> BMW story",
+            "stream": 3,
+            "room": "Training Room 3C",
+            "presenters": [26],
             "isBreak": false
           },
           {
@@ -63,22 +119,24 @@
             "id": 108,
             "startTime": "14:30",
             "endTime": "15:00",
-            "name": "EM Stream 1 - Report out",
+            "name": "Report-out for Stream \"Unified Solutions\"",
+            "room": "Auditorium",
             "isBreak": false
           },
           {
             "id": 109,
             "startTime": "15:00",
             "endTime": "16:00",
-            "name": "Joint Key Note",
+            "name": "Joint Opening (Frankfurt + Wrocław + Pune)",
             "presenters": [1],
+            "room": "Auditorium",
             "isBreak": false
           },
           {
             "id": 110,
             "startTime": "16:00",
             "endTime": "16:30",
-            "name": "Break",
+            "name": "Tea & Coffee Break",
             "isBreak": true
           },
           {
@@ -86,21 +144,24 @@
             "startTime": "16:30",
             "endTime": "17:00",
             "name": "Presentation: EPDM Agile transformation Journey",
+            "presenters": [27],
+            "room": "Auditorium",
             "isBreak": false
           },
           {
             "id": 112,
             "startTime": "17:00",
             "endTime": "17:30",
-            "name": "Speech by India EM Community Leader",
+            "name": "Presentation: From India EM Community Leader",
             "presenters": [2],
+            "room": "Auditorium",
             "isBreak": false
           },
           {
             "id": 113,
             "startTime": "17:30",
             "endTime": "18:00",
-            "name": "Break",
+            "name": "Tea & Coffee Break",
             "isBreak": true
           },
           {
@@ -109,20 +170,28 @@
             "endTime": "19:00",
             "name": "Joint External Key Note: \"Winning Together\"",
             "presenters": [3],
+            "room": "Auditorium",
             "isBreak": false
           },
           {
             "id": 115,
             "startTime": "19:00",
-            "endTime": "19:30",
-            "name": "Photo session",
-            "isBreak": false
+            "endTime": "20:00",
+            "name": "Social Dinner in Taj Gateway",
+            "isBreak": true
           },
           {
             "id": 116,
-            "startTime": "20:00",
-            "endTime": "20:30",
-            "name": "Dinner",
+            "startTime": "22:00",
+            "endTime": "22:30",
+            "name": "1st Bus to Hotel ZIP BY SPREE",
+            "isBreak": true
+          },
+          {
+            "id": 116,
+            "startTime": "23:00",
+            "endTime": "23:30",
+            "name": "2nd Bus to Hotel ZIP BY SPREE",
             "isBreak": true
           }
         ]
@@ -132,38 +201,67 @@
         "date": "2019-03-23",
         "timeSlots": [
           {
+            "id": 198,
+            "startTime": "07:30",
+            "endTime": "08:30",
+            "name": "Breakfast at Hotel ZIP BY SPREE + Check Out from Hotel",
+            "isBreak": true
+          },{
+            "id": 199,
+            "startTime": "08:30",
+            "endTime": "09:30",
+            "name": "Bus Travel from Hotel to Capgemini University Campus, Hinjewadi",
+            "isBreak": true
+          },
+          {
             "id": 200,
             "startTime": "09:30",
             "endTime": "10:00",
-            "name": "Kick Off Day 2",
+            "name": "Brief on Agenda and Streams",
+            "room": "Training Room 3A",
+            "presenters": [11, 12],
             "isBreak": false
           },
           {
             "id": 201,
             "startTime": "10:00",
             "endTime": "10:30",
-            "name": "Presentation: X-tech Service offering",
+            "name": "Presentation: X-Tech offering",
+            "room": "Auditorium",
+            "presenters": [24],
             "isBreak": false
           },
           {
             "id": 202,
             "startTime": "10:30",
             "endTime": "11:30",
-            "name": "Presentation: ADC Service offering",
+            "name": "Presentation: ADC offering",
+            "room": "Auditorium",
+            "presenters": [4],
             "isBreak": false
           },
           {
             "id": 203,
             "startTime": "11:30",
             "endTime": "12:00",
-            "name": "Break",
+            "name": "Tea & Coffee Break",
             "isBreak": true
           },
           {
             "id": 204,
             "startTime": "12:00",
+            "endTime": "13:00",
+            "name": "Presentation: Insight to LEAD from Delivery Head AppsDE",
+            "room": "Auditorium",
+            "presenters": [8],
+            "isBreak": false
+          },
+          {
+            "id": 2041,
+            "startTime": "13:00",
             "endTime": "13:30",
-            "name": "Cultural Awareness while working in Offshore-Onshore Project",
+            "name": "Report-out for Stream \"Deliver\"",
+            "room": "Auditorium",
             "isBreak": false
           },
           {
@@ -177,47 +275,77 @@
             "id": 206,
             "startTime": "14:30",
             "endTime": "15:30",
-            "name": "Joint Key Note (FRA + WRO)",
-            "presentations": [5,6],
+            "name": "Joint Key Note (Frankfurt + Wrocław + Pune)",
+            "room": "Auditorium",
+            "presenters": [5,6],
             "isBreak": false
           },
           {
             "id": 207,
             "startTime": "15:30",
             "endTime": "16:00",
-            "name": "Break",
+            "name": "Tea & Coffee Break",
             "isBreak": true
           },
           {
             "id": 208,
             "startTime": "16:00",
             "endTime": "16:30",
-            "name": "EM Community Global View and Curriculum",
-            "presentations": [7],
+            "name": "EM Community Global View and Curriculum (Frankfurt + Pune)",
+            "room": "Auditorium",
+            "presenters": [7],
             "isBreak": false
           },
           {
             "id": 208,
             "startTime": "16:30",
             "endTime": "17:00",
-            "name": "Report-out (with AR + EM)",
+            "name": "Report-out for Stream \"Deliver\"",
+            "room": "Auditorium",
             "isBreak": false
           },
           {
             "id": 209,
             "startTime": "17:00",
             "endTime": "17:30",
-            "name": "Joint Wrap-up",
+            "name": "Joint Wrap-up (Frankfurt + Wrocław + Pune)",
+            "room": "Auditorium",
+            "presenters": [10],
             "isBreak": false
           },
           {
             "id": 210,
             "startTime": "17:30",
             "endTime": "18:00",
-            "name": "End + Coffee",
+            "name": "Tea & Coffee Break",
             "isBreak": true
-          }          
+          }   ,
+          {
+            "id": 211,
+            "startTime": "18:00",
+            "endTime": "18:15",
+            "name": "Bus to Mumbai",
+            "isBreak": true
+          }
         ]
+      }
+    ],
+
+    "streams": [
+      {
+        "id": 1,
+        "name": "Effective Testing | X-Tech",
+        "color": "#ff304c"
+      },
+      {
+        "id": 2,
+        "name": "EM & AR Collaboration | B/S/H",
+        "color": "#0070ad"
+      },
+      {
+        "id": 3,
+        "name": "Quality & Measurement Criteria | BMW Story",
+        "color": "#95e616"
       }
     ]
   },
@@ -232,7 +360,7 @@
     },
     {
       "id": 3,
-      "name": "Roland Gabler"
+      "name": "Roland Gäbler"
     },
     {
       "id": 4,
@@ -249,6 +377,86 @@
     {
       "id": 7,
       "name": "Gary Robinson"
+    },
+    {
+      "id": 8,
+      "name": "Andrea Hendrickx"
+    },
+    {
+      "id": 9,
+      "name": "Rajashree Das"
+    },
+    {
+      "id": 10,
+      "name": "Thilo Hermann"
+    },
+    {
+      "id": 11,
+      "name": "Santhana Sebastian"
+    },
+    {
+      "id": 12,
+      "name": "Prashant Setty"
+    },
+    {
+      "id": 13,
+      "name": "Shaini Menon (EM)"
+    },
+    {
+      "id": 14,
+      "name": "Nilesh Labde (AR)"
+    },
+    {
+      "id": 15,
+      "name": "Tilakraj Shetty (EM)"
+    },
+    {
+      "id": 16,
+      "name": "Deepa Nayak (AR - CSD)"
+    },
+    {
+      "id": 17,
+      "name": "Sripriya Venkatesan (AR - CSD)"
+    },
+    {
+      "id": 18,
+      "name": "Ashutosh Moharir (AR - PBS)"
+    },
+    {
+      "id": 19,
+      "name": "Mayank Choudhary (AR - PBS)"
+    },
+    {
+      "id": 20,
+      "name": "Prashant Setty (EM)"
+    },
+    {
+      "id": 21,
+      "name": "Nitesh Sharma (AR - CSD)"
+    },
+    {
+      "id": 22,
+      "name": "Debopriya Ghosh (AR - PBS)"
+    },
+    {
+      "id": 23,
+      "name": "Suprio Chatterjee (AR - PBS)"
+    },
+    {
+      "id": 24,
+      "name": "Sudip Kumar"
+    },
+    {
+      "id": 25,
+      "name": "Khitish Behera"
+    },
+    {
+      "id": 26,
+      "name": "Tilakraj Shetty"
+    },
+    {
+      "id": 27,
+      "name": "Vinay Pillay"
     }
   ]
 }

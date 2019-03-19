@@ -42,7 +42,7 @@
             "startTime": "11:30",
             "endTime": "12:15",
             "name": "A strategic view on LEAD",
-            "presenters": [2],
+            "presenters": [5],
             "room": "Matterhorn II",
             "isBreak": false
           },
@@ -67,7 +67,7 @@
             "endTime": "14:30",
             "name": "External Key Note: \"Winning Together\"",
             "room": "Matterhorn II",
-            "presenters": [3],
+            "presenters": [6],
             "isBreak": false
           },
           {
@@ -141,9 +141,9 @@
             "id": 202,
             "startTime": "10:00",
             "endTime": "11:00",
-            "name": "Joint Key Note (FRA + WRO)",
+            "name": "Joint Key Note",
             "room": "Matterhorn II",
-            "presenters": [2,3],
+            "presenters": [2, 3],
             "isBreak": false
           },
           {
@@ -225,7 +225,7 @@
   "presenters": [
     {
       "id": 1,
-      "name": "Garry Robinson"
+      "name": "Michael Schulte"
     },
     {
       "id": 2,
@@ -238,6 +238,14 @@
     {
       "id": 4,
       "name": "Gary Robinsen"
+    },
+    {
+      "id": 5,
+      "name": "Bernd Wöllner"
+    },
+    {
+      "id": 6,
+      "name": "Roland Gäbler"
     }
   ]
 }
