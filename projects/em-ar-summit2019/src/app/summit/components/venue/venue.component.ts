@@ -7,8 +7,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./venue.component.scss']
 })
 export class VenueComponent {
-  hotels = [];
+  venue = {};
   constructor(route: ActivatedRoute) {
-    this.hotels = route.snapshot.data['hotels'];
+    this.venue = route.snapshot.data['venue'];
   }
 }

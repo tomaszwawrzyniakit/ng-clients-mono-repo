@@ -1,29 +1,43 @@
-<div class="hotel-info-new" *ngFor="let hotel of hotels">
+<div class="hotel-info-new" *ngIf="venue.contacts">
+  <mat-card class="hotel-card">
+    <mat-card-header>
+      <mat-card-title><h2 class="mat-title">Org Team Contacts</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-actions *ngFor="let contact of venue.contacts">
+      {{ contact.name }}
+      <a mat-raised-button href="mailto:{{ contact.email }}" target="_blank">
+        <mat-icon>email</mat-icon><span class="icon-label">Email</span>
+      </a>
+      <a mat-raised-button href="tel:{{ contact.tel }}" target="_blank">
+        <mat-icon>phone</mat-icon><span class="icon-label">Call</span>
+      </a>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<div class="hotel-info-new" *ngFor="let place of venue.places">
   <mat-card class="hotel-card">
     <mat-card-header>
       <mat-icon>add_location</mat-icon>
       <mat-card-title
-        ><h2 class="mat-title">{{ hotel.name }}</h2></mat-card-title
+        ><h2 class="mat-title">{{ place.name }}</h2></mat-card-title
       >
     </mat-card-header>
-    <mat-card-header *ngIf="hotel.subtitle">
-      <mat-card-title
-        >{{ hotel.subtitle }}</mat-card-title
-      >
+    <mat-card-header *ngIf="place.subtitle">
+      <mat-card-title>{{ place.subtitle }}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <p class="address mat-body-1">
-        <span *ngFor="let adresLine of hotel.adres">{{ adresLine }}</span>
+        <span *ngFor="let adresLine of place.adres">{{ adresLine }}</span>
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <a mat-raised-button href="{{ hotel.navigateUrl }}" target="_blank">
+      <a mat-raised-button href="{{ place.navigateUrl }}" target="_blank">
         <mat-icon>directions</mat-icon><span class="icon-label">Navigate</span>
       </a>
       <a
         mat-raised-button
-        *ngFor="let contact of hotel.contactUrls"
-        href="{{ contact.url }}"
+        *ngFor="let contact of place.contacts"
+        href="tel:{{ contact.tel }}"
         target="_blank"
       >
         <mat-icon>phone</mat-icon

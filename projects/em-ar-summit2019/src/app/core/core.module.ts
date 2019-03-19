@@ -26,7 +26,7 @@ const scheduleDialogRoute = {
 const venueRoute = {
   path: 'venue',
   resolve: {
-    hotels: VenueDialogResolver
+    venue: VenueDialogResolver
   },
   component: VenueComponent
 };
