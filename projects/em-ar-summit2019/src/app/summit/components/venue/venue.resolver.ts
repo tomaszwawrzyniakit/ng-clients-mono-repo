@@ -86,7 +86,7 @@ const venues = {
 @Injectable({
   providedIn: 'root'
 })
-export class VenueDialogResolver implements Resolve<Schedule> {
+export class VenueResolver implements Resolve<Schedule> {
   constructor() {}
 
   resolve(

@@ -14,7 +14,7 @@ import { BuildingPlanComponent } from '../summit/components/building-plan/buildi
 import { WroSideNavComponent } from '../summit/arch-wro/components/wro-side-nav/wro-side-nav.component';
 import { EmPnqSideNavComponent } from '../summit/em-png/components/em-pnq-side-nav/em-pnq-side-nav.component';
 import { VenueComponent } from '../summit/components/venue/venue.component';
-import { VenueDialogResolver } from '../summit/components/venue/venue-dialog.resolver';
+import { VenueResolver } from '../summit/components/venue/venue.resolver';
 
 const scheduleDialogRoute = {
   path: '',
@@ -26,7 +26,7 @@ const scheduleDialogRoute = {
 const venueRoute = {
   path: 'venue',
   resolve: {
-    venue: VenueDialogResolver
+    venue: VenueResolver
   },
   component: VenueComponent
 };
